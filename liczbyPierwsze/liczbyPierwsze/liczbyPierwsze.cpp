@@ -4,29 +4,32 @@ using namespace std;
 
 int main()
 {
-	int n = 0;
+	int n = 1;
 	int lp = 0;
 	int p = 2;
-
+	bool pierwsza;
 
 	cout << "Ile liczb pierwszych chcesz wyswietlic? ";
 	cin >> n;
 
 	while (lp < n)
 	{
-		for (int d = 2; d < n; d++)
+		pierwsza = true;
+		for (int d = 2; d < p - 1; d++)
 		{
-			n% d;
-			if (n % d == 0)
+			p% d;
+			if (p % d == 0)
 			{
-				cout << n << "nie jest liczba pierwsza" << endl;
-			}
-			else
-			{
-				cout << n << "jest liczba pierwsza" << endl;
+				pierwsza = false;
 			}
 		}
 
+		if (pierwsza == true)
+		{
+			cout << p << " ";
+		}
+
 		lp += 1;
+		p += 1;
 	}
 }
