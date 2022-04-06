@@ -27,9 +27,9 @@ int main()
 		if (pierwsza == true)
 		{
 			cout << p << " ";
+			lp += 1;
 		}
 
-		lp += 1;
 		p += 1;
 	}
 }
