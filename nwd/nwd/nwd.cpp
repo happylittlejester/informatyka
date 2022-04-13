@@ -30,5 +30,5 @@ int main()
 	}
 
 	cout << "najwieszky wspolny dzielnik to: " << a << endl;
-	cout << "najmnijsza wspolna wielokrotnosc to: " << nww << endl;
+	cout << "najmniejsza wspolna wielokrotnosc to: " << nww << endl;
 }
