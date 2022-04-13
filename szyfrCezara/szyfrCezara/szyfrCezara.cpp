@@ -2,18 +2,27 @@
 
 using namespace std;
 
+void Funkcja(int klucz, char tab[]);
+
 int main()
 {
 	int klucz;
 	char tab[100];
-	int dl = strlen(tab);
 
 	cout << "Podaj wyraz skladajacy sie z malych liter: ";
 	cin >> tab;
-	cout << "Podaj klucz z przedzialu [-26..26]: ";
+	cout << "Podaj klucz z przedzialu [-26,26]: ";
 	cin >> klucz;
 
-	if (klucz < -26 && klucz > 26)
+	Funkcja(klucz, tab);
+	cout << endl;
+}
+
+void Funkcja(int klucz, char tab[])
+{
+	int dl = strlen(tab);
+
+	if (!(klucz >= -26 && klucz <= 26))
 	{
 		//break
 	}
@@ -25,13 +34,14 @@ int main()
 			{
 				if (tab[i] + klucz <= 'z')
 				{
-					tab += klucz;
+					tab[i] += klucz;
 				}
 				else
 				{
-					tab = tab + klucz - 26;
+					tab[i] = tab[i] + klucz - 26;
 				}
 			}
+			cout << "Po zaszyfrowaniu: " << tab;
 		}
 		else
 		{
@@ -39,15 +49,14 @@ int main()
 			{
 				if (tab[i] + klucz >= 'a')
 				{
-					tab += klucz;
+					tab[i] += klucz;
 				}
 				else
 				{
-					tab = tab + klucz + 26;
+					tab[i] = tab[i] + klucz + 26;
 				}
 			}
+			cout << "Po zaszyfrowaniu: " << tab;
 		}
 	}
-	//cout << "Po zaszyfrowaniu:" << tab;
-	//cout << "Po rozszyfrowaniu: " << tab;
 }
