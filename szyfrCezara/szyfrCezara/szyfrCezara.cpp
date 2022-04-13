@@ -24,7 +24,7 @@ void Funkcja(int klucz, char tab[])
 
 	if (!(klucz >= -26 && klucz <= 26))
 	{
-		//break
+		return;
 	}
 	else
 	{
