@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void Funkcja(int szukana, int tab[]);
+
 int main()
 {
 	int szukana;
@@ -11,6 +13,12 @@ int main()
 	cout << "Podaj liczbe ktora chcesz znalezc: ";
 	cin >> szukana;
 
+	Funkcja(szukana,tab);
+
+}
+
+void Funkcja(int szukana, int tab[])
+{
 	int l = 0;
 	int p = 15;
 	int sr = (l + p) / 2;
