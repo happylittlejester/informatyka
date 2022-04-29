@@ -14,7 +14,6 @@ int main()
 	cin >> szukana;
 
 	Funkcja(szukana,tab);
-
 }
 
 void Funkcja(int szukana, int tab[])
